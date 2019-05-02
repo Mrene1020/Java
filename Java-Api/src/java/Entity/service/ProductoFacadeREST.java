@@ -71,7 +71,7 @@ public class ProductoFacadeREST extends AbstractFacade<Producto> {
 
     @GET
     @Path("{from}/{to}")
-    @Produces({ MediaType.APPLICATION_JSON})
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public List<Producto> findRange(@PathParam("from") Integer from, @PathParam("to") Integer to) {
         return super.findRange(new int[]{from, to});
     }
